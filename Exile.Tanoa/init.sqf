@@ -9,6 +9,7 @@ if (!isDedicated) then
 	{
 		execVM "badmin\client\init.sqf";
 		execVM "custom\toast.sqf";
+		execVM "addons\statusBar\statusBar.sqf";
 	}
 };
 
