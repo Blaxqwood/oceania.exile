@@ -4,7 +4,7 @@
 author = "Exile Mod Team";
 onLoadName = "Exile Mod";
 onLoadMission= "www.exilemod.com";
-loadScreen = "exile_assets\texture\mod\logo.paa"; 
+loadScreen = "exile_assets\texture\mod\logo.paa";
 disableChannels[] = {0, 2};
 OnLoadIntro = "";
 OnLoadIntroTime = false;
@@ -27,7 +27,7 @@ respawn = "BASE";
 respawnDelay = 120;
 respawnDialog = 0;
 respawnOnStart = 0;
-respawnButton = 1; 
+respawnButton = 1;
 respawnTemplates[] = {"Exile"};
 corpseManagerMode = 0;
 corpseLimit = 20;
@@ -43,7 +43,7 @@ enableItemsDropping = 0;
 briefing = 0;
 debriefing = 0;
 allowFunctionsLog = 1;
-enableDebugConsole = 0; 
+enableDebugConsole = 0;
 allowFunctionsRecompile = 0;
 showSquadRadar = 0;
 showUAVFeed = 0;
@@ -51,11 +51,11 @@ reviveDelay = 6;
 reviveForceRespawnDelay = 3;
 reviveBleedOutDelay = 120;
 
-showHUD[] = 
+showHUD[] =
 {
     true,   // Scripted HUD (same as showHUD command)
     true,   // Vehicle + soldier info
-    true,   // Vehicle radar 
+    true,   // Vehicle radar
     true,   // Vehicle compass
     true,   // Tank direction indicator
     false,  // Commanding menu
@@ -65,6 +65,15 @@ showHUD[] =
 };
 
 #include "config.cpp"
+//bAdmin dialog includes
+#include "badmin\client\gui_base.hpp"
+#include "badmin\client\systems\common.hpp"
+#include "badmin\client\systems\adminPanel\dialog\adminMenu.hpp"
+#include "badmin\client\systems\adminPanel\dialog\modMenu.hpp"
+#include "badmin\client\systems\adminPanel\dialog\serverAdminMenu.hpp"
+#include "badmin\client\systems\adminPanel\dialog\debugMenu.hpp"
+#include "badmin\client\systems\adminPanel\dialog\shopMenu.hpp"
+#include "badmin\client\systems\adminPanel\dialog\playerMenu.hpp"
 
 class CfgRemoteExec
 {
@@ -85,3 +94,5 @@ class CfgRemoteExec
         jip = 0;
     };
 };
+
+#include "core\cfg\CfgFunctions.hpp"

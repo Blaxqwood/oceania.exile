@@ -2,7 +2,6 @@
  * Created with Exile Mod 3DEN Plugin
  * www.exilemod.com
  */
-
 if (!hasInterface || isServer) exitWith {};
 
 // 76 NPCs
@@ -89,10 +88,10 @@ private _npcs = [
     private _logic = "Logic" createVehicleLocal [0, 0, 0];
     private _trader = (_x select 0) createVehicleLocal [0, 0, 0];
     private _animations = _x select 1;
-    
+
     _logic setPosWorld (_x select 5);
     _logic setVectorDirAndUp [_x select 6, _x select 7];
-    
+
     _trader setVariable ["BIS_enableRandomization", false];
     _trader setVariable ["BIS_fnc_animalBehaviour_disable", true];
     _trader setVariable ["ExileAnimations", _animations];
