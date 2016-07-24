@@ -20,7 +20,7 @@ if (_uid call isAdmin) then
 	_displayShop = uiNamespace getVariable "ShopMenu";
 	_shopSelect = _displayShop displayCtrl shopMenu_option;
 
-	_panelOptions = ["Soon",
+	_panelOptions = ["Territory",
 					"Soon",
 					"Soon",
 					"Soon"

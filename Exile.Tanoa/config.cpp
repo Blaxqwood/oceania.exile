@@ -1,3 +1,4 @@
+#include "MostWanted_Client\CfgMostWanted.cpp"
 /**
  * config
  *
@@ -2716,7 +2717,11 @@ class CfgExileArsenal
 
 class CfgExileCustomCode
 {
-	
+	ExileClient_gui_xm8_showPartySlides = "MostWanted_Client\overwrites\ExileClient_gui_xm8_showPartySlides.sqf";
+	ExileServer_object_player_createBambi = "MostWanted_Client\overwrites\ExileServer_object_player_createBambi.sqf";
+	ExileServer_object_player_database_load = "MostWanted_Client\overwrites\ExileServer_object_player_database_load.sqf";
+	ExileServer_object_player_event_onMpKilled = "MostWanted_Client\overwrites\ExileServer_object_player_event_onMpKilled.sqf";
+	ExileServer_system_network_event_onPlayerConnected = "MostWanted_Client\overwrites\ExileServer_system_network_event_onPlayerConnected.sqf";
 };
 
 class CfgExileEnvironment
@@ -3052,6 +3057,21 @@ class ExileAbstractAction
  */
 class CfgInteractionMenus
 {
+		class Bounties
+	{
+	    targetType = 2;
+	    target = "Exile_Trader_Office";
+
+	    class Actions
+	    {
+	        class MostWanted: ExileAbstractAction
+	        {
+	            title = "Most Wanted";
+	            condition = "true";
+	            action = "createDialog 'MostWantedDialog';";
+	        };
+	    };
+	};
 	class Car
 	{
 		targetType = 2;

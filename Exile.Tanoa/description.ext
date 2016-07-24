@@ -1,9 +1,9 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Server Settings - Modify at will
 ///////////////////////////////////////////////////////////////////////////////
-author = "Exile Mod Team";
+author = "Oceania.Network";
 onLoadName = "Exile Mod";
-onLoadMission= "www.exilemod.com";
+onLoadMission= "www.Oceania.Network";
 loadScreen = "exile_assets\texture\mod\logo.paa";
 disableChannels[] = {0, 2};
 OnLoadIntro = "";
@@ -17,6 +17,15 @@ class Header
     maxPlayers = 100;
 };
 
+class CfgHints
+{
+    #include "MostWanted_Client\Notifications.hpp"
+};
+
+class CfgNetworkMessages
+{
+    #include "MostWanted_Client\NetworkMessages.hpp"
+};
 ///////////////////////////////////////////////////////////////////////////////
 // Exile Settings - Do not change these!
 ///////////////////////////////////////////////////////////////////////////////
@@ -65,7 +74,6 @@ showHUD[] =
 };
 
 #include "config.cpp"
-//bAdmin dialog includes
 #include "badmin\client\gui_base.hpp"
 #include "badmin\client\systems\common.hpp"
 #include "badmin\client\systems\adminPanel\dialog\adminMenu.hpp"
@@ -74,6 +82,8 @@ showHUD[] =
 #include "badmin\client\systems\adminPanel\dialog\debugMenu.hpp"
 #include "badmin\client\systems\adminPanel\dialog\shopMenu.hpp"
 #include "badmin\client\systems\adminPanel\dialog\playerMenu.hpp"
+#include "MostWanted_Client\Dialog\MostWantedDefines.hpp"
+#include "MostWanted_Client\Dialog\MostWantedDialog.hpp"
 
 class CfgRemoteExec
 {

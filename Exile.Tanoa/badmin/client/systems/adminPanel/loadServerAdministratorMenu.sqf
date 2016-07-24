@@ -21,12 +21,20 @@ if ([_uid, 3] call isAdmin) then {
 
 	_panelOptions = ["Player Management",
 					"Player Markers",
-					"Shop Menu",
+					"Vehicle Management",
+					"Fill Magazine",
 					"Add Poptabs",
 	                "Add Score",
 	                "Teleport Menu",
 					"Show Server FPS",
-	                "Toggle God-mode"
+	                "Toggle God-mode",
+					"Repair / Flip Vehicle",
+					"No Recoil",
+					"Delete Cursor Target",
+					"Fix Target",
+					"Territory",
+					"Territory Protection"
+					
 	];
 
 	{

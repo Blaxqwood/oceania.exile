@@ -1,6 +1,4 @@
-// bAdmin Exile by Biabock
 execVM "custom\acd_TB\run.sqf";
-[] call rg_exile_fnc_initCore;
 #define DEBUG false
 
 [DEBUG] call compile preprocessFileLineNumbers "badmin\globalCompile.sqf";
@@ -10,12 +8,15 @@ if (!isDedicated) then
 	if (hasInterface) then // Normal player
 	{
 		execVM "badmin\client\init.sqf";
+		execVM "custom\toast.sqf";
 	}
 };
 
-if (hasInterface) then
+if (isServer) then
 {
-	execVM "addons/notificaions.sqf";
+	diag_log "bAdmin - Initializing";
+	[] execVM "badmin\server\init.sqf";
+	[] execVM "MostWanted_Client\MostWanted_Init.sqf";
 };
 
 OPEN_bADMIN_FNC = {

@@ -43,8 +43,9 @@ else
 	// Server Owners: access to everything, including god mode, money, guns, and vehicles
 	serverOwners = compileFinal str
 	[
-		"76561198058167294", // Blaxqwood
-		"76561198079543397" //Jezz
+	"76561198058167294", // BLAX
+	"76561198079543397", // JEZ
+	"76561198119540941" // God
 	];
 
 	/********************************************************/

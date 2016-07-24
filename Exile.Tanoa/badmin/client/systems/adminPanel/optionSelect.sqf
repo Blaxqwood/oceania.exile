@@ -39,35 +39,66 @@ if (_uid call isAdmin) then
 					closeDialog 0;
 					execVM "badmin\client\systems\adminPanel\playerTags.sqf";
 				};
-				case 2: //Shop
+				case 2: //Tags
 				{
 					closeDialog 0;
-					execVM "badmin\client\systems\adminPanel\loadShopMenu.sqf";
+					execVM "badmin\client\systems\adminPanel\vehicleManagement.sqf";
 				};
-				case 3: //Add Money
+				case 3: //Magazine 
+				{
+					closeDialog 0;
+					execVM "badmin\client\systems\adminPanel\exammo.sqf";
+				};
+				case 4: //Add Money
 				{
 					_Poptabs = 10000;
 					ExileClientPlayerMoney = ExileClientPlayerMoney + _Poptabs;
 					systemChat "Added 10000 Poptabs for you";
 				};
-				case 4: //Add Score
+				case 5: //Add Score
 				{
 					_Score = 10000;
 					ExileClientPlayerScore = ExileClientPlayerScore + _Score;
 					systemChat "Added 10000 Score for you";
 				};
-				case 5: //TP Menu
+				case 6: //TP Menu
 				{
 					closeDialog 0;
 					execVM "badmin\client\systems\adminPanel\loadDebugMenu.sqf";
 				};
-				case 6: //Server FPS
+				case 7: //Server FPS
 				{
 					hint format["Server FPS: %1",serverFPS];
 				};
-				case 7: // toggle God mode
+				case 8: // toggle God mode
 				{
 					execVM "badmin\client\systems\adminPanel\toggleGodMode.sqf";
+				};
+				case 9: // Repair/Flip
+				{
+					execVM "badmin\client\systems\adminPanel\repairflip.sqf";
+				};
+				case 10: // No Recoil
+				{
+					execVM "badmin\client\systems\adminPanel\recoil.sqf";
+				};
+				case 11: // Delete Target
+				{
+					execVM "badmin\client\systems\adminPanel\deletetarget.sqf";
+				};
+				case 12: //Fix Target
+				{
+					execVM "badmin\client\systems\adminPanel\fixtarget.sqf";
+				};
+				case 13: 
+				{
+					closeDialog 0;
+					[] call ExileClient_gui_purchaseTerritoryDialog_show;
+				};
+				case 14:
+				{
+					closeDialog 0;
+					[] call ExileClient_gui_payTerritoryProtectionMoneyDialog_show;
 				};
 			};
 		};
@@ -104,17 +135,17 @@ if (_uid call isAdmin) then
 				case 0: //soon
 				{
 					closeDialog 0;
-					systemChat "Not Implemented Yet";
+					[] call ExileClient_gui_purchaseTerritoryDialog_show;
 				};
 				case 1: //soon
 				{
 					closeDialog 0;
-					systemChat "Not Implemented Yet";
+					[] call ExileClient_gui_traderDialog_show;
 				};
 				case 2: //soon
 				{
 					closeDialog 0;
-					systemChat "Not Implemented Yet";
+					[] call ExileClient_gui_vehicleTraderDialog_show;
 				};
 				case 3: //soon
 				{
